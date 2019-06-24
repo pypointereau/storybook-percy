@@ -1,0 +1,18 @@
+include ../updated/updated.mixin.pug
+
+mixin storyblock(post)
+	article.storyblock
+		+updated(post.primary_section_route, post.date_live)
+		h4.storyblock_heading(font-title-s)
+			a(href=post.link)=post.headline
+		if post.thumbnail
+			a.storyblock_image(href=post.link)
+				img.storyblock_image_img(
+					src=post.thumbnail.src
+					alt=post.thumbnail.title
+					width=post.thumbnail.width
+					height=post.thumbnail.height
+				)
+		else
+			a.storyblock_no-image(href=post.link)
+		p.storyblock_standfirst(font-body-m)=post.standfirst

@@ -1,0 +1,7 @@
+include ../storyblock/storyblock.mixin.pug
+mixin collection(posts)
+    div.collection
+        ul.collection_ul
+            each item in posts.items
+                li.collection_li
+                    +storyblock(item)

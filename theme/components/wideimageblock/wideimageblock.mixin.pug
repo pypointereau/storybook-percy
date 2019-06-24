@@ -1,0 +1,18 @@
+include ../updated/updated.mixin.pug
+
+mixin wideimageblock(post)
+	article.wideimageblock
+		+updated(post.primary_section_route, post.date_live)
+		if post.block_wide_image
+			a.wideimageblock_image(href=post.link)
+				img.wideimageblock_image_img(
+					src=post.block_wide_image.src
+					alt=post.post.block_wide_image.title
+					width=post.post.block_wide_image.width
+					height=post.post.block_wide_image.height
+				)
+		else
+			a.wideimageblock_no-image(href=post.link)
+		h4.wideimageblock_heading
+			a(href=post.link)=post.headline
+		p.wideimageblock_standfirst=post.standfirst

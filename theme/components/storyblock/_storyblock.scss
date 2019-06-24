@@ -1,0 +1,23 @@
+.storyblock {
+    //display: grid;
+    grid-gap: 8px;
+    grid-template-areas: "heading heading" 
+                         "image text";
+    color: var(--color);
+}
+.storyblock_heading {
+	grid-area: heading;
+	margin: 0 0 8px;
+    a:link {
+        color: #323232;
+    }
+}
+.storyblock_image {
+	grid-area: image;
+}
+.storyblock_image_img {
+	display: block;
+}
+.storyblock_standfirst {
+	grid-area: text;
+}

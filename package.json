@@ -1,0 +1,35 @@
+{
+  "name": "storybook-percy",
+  "version": "1.0.0",
+  "description": "Testing percy in a storybook library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -c storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pypointereau/storybook-percy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pypointereau/storybook-percy/issues"
+  },
+  "homepage": "https://github.com/pypointereau/storybook-percy#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-centered": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/html": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.12.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^7.1.0",
+    "storybook": "^1.0.0"
+  }
+}

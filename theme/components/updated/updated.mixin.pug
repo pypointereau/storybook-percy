@@ -1,0 +1,10 @@
+mixin updated(primary_section_route, date_live)
+	-
+		var routeName = primary_section_route.split('/')
+		routeName = routeName[routeName.length - 2]
+
+	.updated
+		span.updated_section
+			a(href=primary_section_route)= routeName
+		span.updated_datetime(title=date_live)
+			em.updated_datetime_timestamp=date_live

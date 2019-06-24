@@ -1,0 +1,18 @@
+.header{
+	min-width: 200px;
+	width: 100%;
+	border-bottom: 1px solid var(--color);
+	padding: var(--space-xl) 0;
+}
+.header_h1{
+	padding: 0;margin: 0;
+}
+.header_link{
+	display: block;
+	margin: auto;
+}
+.header_link_image{
+	display: block;
+	width: 100%;
+	max-height: 80px;
+}

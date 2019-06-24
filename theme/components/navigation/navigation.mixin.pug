@@ -1,0 +1,7 @@
+mixin navigation(nav)
+	nav.navigation#navigation
+		ul.navigation_ul
+			for item in nav
+				if item.menu_item_parent === '0'
+					li.navigation_li
+						a.navigation_link(href=item.url, font-base-m)= item.title

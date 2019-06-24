@@ -1,0 +1,29 @@
+.modulec {
+
+}
+
+.modulec_list {
+	display: grid;
+	grid-gap: 14px;
+	grid-template-areas: "midblockone storyblockone storyblocktwo" 
+						 "midblockone storyblockthree storyblockfour"
+						 "storyblockfive storyblocksix storyblockseven";
+}
+
+.modulec {
+	article:nth-child(1) {
+		grid-area: midblockone;
+	}
+	article:nth-child(2) {
+		grid-area: storyblockone;	
+	}
+	article:nth-child(3) {
+		grid-area: storyblocktwo;	
+	}
+	article:nth-child(4) {
+		grid-area: storyblockthree;	
+	}
+	article:nth-child(5) {
+		grid-area: storyblockfour;	
+	}
+}

@@ -1,0 +1,18 @@
+include ../updated/updated.mixin.pug
+
+mixin midimageblock(post)
+	article.midimageblock
+		+updated(post.primary_section_route, post.date_live)
+		if post.block_mid_image
+			a.midimageblock_image(href=post.link)
+				img.midimageblock_image_img(
+					src=post.block_mid_image.src
+					alt=post.block_mid_image.title
+					width=post.block_mid_image.width
+					height=post.block_mid_image.height
+				)
+		else
+			a.midimageblock_no-image(href=post.link)
+		h4.midimageblock_heading
+			a(href=post.link)=post.headline
+		p.midimageblock_standfirst=post.standfirst

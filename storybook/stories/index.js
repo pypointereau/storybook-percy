@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/html';
 import centered from '@storybook/addon-centered/html';
 import {array,boolean,button,color,date,select,withKnobs,text,number} from '@storybook/addon-knobs';
 
-const options = {
+const brandStyles = {
 	nca: require('!!raw-loader!@theme/brand-styles/nca.css').default,
 	mhr: require('!!raw-loader!@theme/brand-styles/mhr.css').default,
 	bodyandsoul: require('!!raw-loader!@theme/brand-styles/bodyandsoul.css').default,
@@ -19,7 +19,8 @@ const options = {
 // 	standfirst: text('StandFirst', 'Twenty years on from a nude photoshoot that shocked the world, the Australian women’s soccer team heads to the World Cup as serious contenders.'),
 // 	primary_section_route: 'zerzerz/zerzrerze/'
 // });
-const brandStyle = () => select('Brand style', options, options.nca);
+const brandStyle = () => select('Brand style', ['nca', 'mhr', 'bodyandsoul', 'whimn', 'kidspot'], 'nca');
+const brandStyleCode = (brand) => brandStyles[brand];
 const nav = () => ([
 	{ menu_item_parent: '0', url: 'https://www.news.com.au/national', title: 'National' },
 	{ menu_item_parent: '0', url: 'https://www.news.com.au/world', title: 'World' }
@@ -90,6 +91,6 @@ const templateNavigation = require("pug-loader!@components/navigation/navigation
 storiesOf('Navigation', module)
 	.addDecorator(centered)
 	.addDecorator(withKnobs)
-	.add('Simple', () => {
-		return `<style>${brandStyle()}</style>` + templateNavigation({nav: nav()});
+	.add('Navigation - Simple', () => {
+		return `<style>${brandStyleCode(brandStyle())}</style>` + templateNavigation({nav: nav()});
 	});

@@ -4,8 +4,9 @@
   "description": "Testing percy in a storybook library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -c storybook"
+    "test": "npx percy exec -- node percy/snapshot.js",
+    "storybook": "start-storybook -c storybook",
+    "percy": "PERCY_TOKEN=5ca56059998fe99c0a6dc5269705063cd9bb3ddd4cc0b99e61ff558d0a4f0020 PERCY_BRANCH=local npm run test"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/pypointereau/storybook-percy#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@percy/script": "^1.0.0",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",

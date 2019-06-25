@@ -4,9 +4,8 @@
   "description": "Testing percy in a storybook library",
   "main": "index.js",
   "scripts": {
-    "test": "npx percy exec -- node percy/snapshot.js",
     "storybook": "start-storybook -c storybook",
-    "percy": "PERCY_TOKEN=5ca56059998fe99c0a6dc5269705063cd9bb3ddd4cc0b99e61ff558d0a4f0020 PERCY_BRANCH=local npm run test"
+    "snapshot": "build-storybook -c storybook && PERCY_TOKEN=f81c4443feb26ca3ae257331a37980abc89da6c11b78ec9c114d08c73fe82804 percy-storybook --widths=320,1280"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@percy/script": "^1.0.0",
+    "@percy/storybook": "^3.1.0",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
